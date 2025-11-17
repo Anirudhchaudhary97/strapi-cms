@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_homepage_case_studies_sections",
+  "info": {
+    "displayName": "Case Studies Section",
+    "description": "Selected success stories"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.section-heading"
+    },
+    "caseStudies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::case-study.case-study"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.cta-card"
+    }
+  }
+}

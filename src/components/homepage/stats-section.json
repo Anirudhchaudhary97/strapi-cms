@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_homepage_stats_sections",
+  "info": {
+    "displayName": "Stats Section",
+    "description": "Proof points and numbers"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.section-heading"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.stat-item"
+    }
+  }
+}

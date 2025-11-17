@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_email_items",
+  "info": {
+    "displayName": "Email Item",
+    "description": "Labeled email contact"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    }
+  }
+}

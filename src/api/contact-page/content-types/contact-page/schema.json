@@ -1,0 +1,58 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_pages",
+  "info": {
+    "singularName": "contact-page",
+    "pluralName": "contact-pages",
+    "displayName": "Contact Page",
+    "description": "Contact page form messaging, location, and map"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "richtext"
+    },
+    "successMessage": {
+      "type": "string"
+    },
+    "errorMessage": {
+      "type": "string"
+    },
+    "locationTitle": {
+      "type": "string"
+    },
+    "locationText": {
+      "type": "text"
+    },
+    "phonesTitle": {
+      "type": "string"
+    },
+    "emailsTitle": {
+      "type": "string"
+    },
+    "businessHoursTitle": {
+      "type": "string"
+    },
+    "businessHoursBody": {
+      "type": "richtext"
+    },
+    "mapTitle": {
+      "type": "string"
+    },
+    "mapEmbedUrl": {
+      "type": "string"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_service_feature_columns",
+  "info": {
+    "displayName": "Feature Column",
+    "description": "Column of service bullet points"
+  },
+  "options": {},
+  "attributes": {
+    "columnTitle": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "service.feature-bullet"
+    }
+  }
+}

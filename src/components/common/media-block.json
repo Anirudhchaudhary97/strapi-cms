@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_common_media_blocks",
+  "info": {
+    "displayName": "Media Block",
+    "description": "Image or video with caption"
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "videos"],
+      "required": true
+    },
+    "altText": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    }
+  }
+}

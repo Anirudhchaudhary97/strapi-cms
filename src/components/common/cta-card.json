@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_common_cta_cards",
+  "info": {
+    "displayName": "CTA Card",
+    "description": "Call-to-action with supporting copy"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "text"
+    },
+    "primaryAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.cta-link"
+    },
+    "secondaryAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.cta-link"
+    }
+  }
+}

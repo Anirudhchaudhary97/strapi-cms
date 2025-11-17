@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_common_list_items",
+  "info": {
+    "displayName": "List Item",
+    "description": "Reusable bullet point"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "iconKey": {
+      "type": "string",
+      "configurable": false
+    }
+  }
+}

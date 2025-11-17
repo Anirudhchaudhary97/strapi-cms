@@ -1,0 +1,106 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_pages",
+  "info": {
+    "singularName": "about-page",
+    "pluralName": "about-pages",
+    "displayName": "About Page",
+    "description": "About page content including mission, leadership, and timeline"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "richtext"
+    },
+    "storyTitle": {
+      "type": "string"
+    },
+    "storyIntro": {
+      "type": "richtext"
+    },
+    "storyImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "storySideLogo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "keyHighlightsTitle": {
+      "type": "string"
+    },
+    "keyHighlights": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.feature-item"
+    },
+    "missionTitle": {
+      "type": "string"
+    },
+    "missionBody": {
+      "type": "richtext"
+    },
+    "visionTitle": {
+      "type": "string"
+    },
+    "visionBody": {
+      "type": "richtext"
+    },
+    "valuesTitle": {
+      "type": "string"
+    },
+    "values": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about.value-item"
+    },
+    "leadershipTitle": {
+      "type": "string"
+    },
+    "leadershipDescription": {
+      "type": "text"
+    },
+    "leaders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::team-member.team-member"
+    },
+    "journeyTitle": {
+      "type": "string"
+    },
+    "journeyIntro": {
+      "type": "text"
+    },
+    "timeline": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.timeline-item"
+    },
+    "ctaTitle": {
+      "type": "string"
+    },
+    "ctaDescription": {
+      "type": "text"
+    },
+    "ctaButtonLabel": {
+      "type": "string"
+    },
+    "ctaButtonLink": {
+      "type": "string"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

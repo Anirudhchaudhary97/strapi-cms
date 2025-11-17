@@ -13,14 +13,18 @@
       "required": true
     },
     "metaDescription": {
-      "type": "text",
-      "required": true
+      "type": "text"
     },
-    "shareImage": {
+    "canonicalUrl": {
+      "type": "string"
+    },
+    "metaImage": {
       "type": "media",
       "multiple": false,
-      "required": false,
       "allowedTypes": ["images"]
+    },
+    "keywords": {
+      "type": "text"
     }
   }
 }

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_opengraphs",
+  "info": {
+    "displayName": "OpenGraph",
+    "description": "Default Open Graph metadata"
+  },
+  "options": {},
+  "attributes": {
+    "ogTitle": {
+      "type": "string",
+      "required": true
+    },
+    "ogDescription": {
+      "type": "text"
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

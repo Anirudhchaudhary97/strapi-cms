@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_security_service_options",
+  "info": {
+    "displayName": "Service Option",
+    "description": "Specific coverage tier or package"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "responseTime": {
+      "type": "string"
+    },
+    "availability": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "pricingNote": {
+      "type": "string"
+    }
+  }
+}

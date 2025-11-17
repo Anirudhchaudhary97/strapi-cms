@@ -1,0 +1,59 @@
+{
+  "kind": "singleType",
+  "collectionName": "company_info",
+  "info": {
+    "singularName": "company-info",
+    "pluralName": "company-infos",
+    "displayName": "Company Info",
+    "description": "Core company profile displayed across the site"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "legalName": {
+      "type": "string",
+      "required": true
+    },
+    "shortName": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "foundedYear": {
+      "type": "integer"
+    },
+    "foundedYearBs": {
+      "type": "string"
+    },
+    "registrationNumber": {
+      "type": "string"
+    },
+    "headOfficeAddress": {
+      "type": "text"
+    },
+    "phoneNumbers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.phone-item"
+    },
+    "emails": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.email-item"
+    },
+    "businessHours": {
+      "type": "richtext"
+    },
+    "aboutSnippet": {
+      "type": "richtext"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

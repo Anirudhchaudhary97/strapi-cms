@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_common_contact_channels",
+  "info": {
+    "displayName": "Contact Channel",
+    "description": "Primary contact method"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    },
+    "channelType": {
+      "type": "enumeration",
+      "enum": ["phone", "email", "office", "whatsapp", "form"],
+      "default": "phone"
+    }
+  }
+}

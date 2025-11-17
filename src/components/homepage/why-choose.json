@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_homepage_why_choose_sections",
+  "info": {
+    "displayName": "Why Choose",
+    "description": "Reasons to choose the company"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.section-heading"
+    },
+    "reasons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.list-item"
+    },
+    "mediaBlock": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.media-block"
+    }
+  }
+}

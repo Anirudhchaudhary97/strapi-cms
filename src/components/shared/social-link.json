@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_social_links",
+  "info": {
+    "displayName": "Social Link",
+    "description": "Platform URL for footer or hero"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "Facebook",
+        "Instagram",
+        "LinkedIn",
+        "Twitter",
+        "YouTube",
+        "Other"
+      ],
+      "default": "Facebook"
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

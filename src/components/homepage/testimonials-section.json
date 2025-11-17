@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_homepage_testimonials_sections",
+  "info": {
+    "displayName": "Testimonials Section",
+    "description": "Client feedback carousel"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.section-heading"
+    },
+    "testimonials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::testimonial.testimonial"
+    }
+  }
+}

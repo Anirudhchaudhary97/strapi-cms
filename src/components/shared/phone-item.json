@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_phone_items",
+  "info": {
+    "displayName": "Phone Item",
+    "description": "Labeled phone contact"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

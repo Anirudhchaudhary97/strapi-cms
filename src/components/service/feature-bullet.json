@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_service_feature_bullets",
+  "info": {
+    "displayName": "Feature Bullet",
+    "description": "Single bullet point for a service column"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

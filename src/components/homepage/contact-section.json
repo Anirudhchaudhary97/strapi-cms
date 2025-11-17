@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_homepage_contact_sections",
+  "info": {
+    "displayName": "Contact Section",
+    "description": "Contact summary for homepage"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.section-heading"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "channels": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.contact-channel"
+    },
+    "primaryAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.cta-card"
+    }
+  }
+}

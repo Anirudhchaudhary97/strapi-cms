@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_common_stats",
+  "info": {
+    "displayName": "Stat",
+    "description": "Key performance metric"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

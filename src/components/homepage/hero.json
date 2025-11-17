@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_homepage_heroes",
+  "info": {
+    "displayName": "Hero",
+    "description": "Homepage hero configuration"
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "subheadline": {
+      "type": "text"
+    },
+    "backgroundMedia": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images", "videos"]
+    },
+    "primaryAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.cta-link"
+    },
+    "secondaryAction": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.cta-link"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.stat-item"
+    }
+  }
+}

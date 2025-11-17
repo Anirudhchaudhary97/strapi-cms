@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_value_items",
+  "info": {
+    "displayName": "Value Item",
+    "description": "Mission or core value detail"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

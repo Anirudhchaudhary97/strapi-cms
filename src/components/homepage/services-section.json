@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_homepage_services_sections",
+  "info": {
+    "displayName": "Services Section",
+    "description": "Featured security services"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "homepage.section-heading"
+    },
+    "lead": {
+      "type": "text"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.cta-card"
+    }
+  }
+}

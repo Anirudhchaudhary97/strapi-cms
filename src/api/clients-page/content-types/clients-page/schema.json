@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "clients_pages",
+  "info": {
+    "singularName": "clients-page",
+    "pluralName": "clients-pages",
+    "displayName": "Clients Page",
+    "description": "Clients page sections and category listings"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "richtext"
+    },
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionSubtitle": {
+      "type": "text"
+    },
+    "clientCategories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::client-category.client-category"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}
