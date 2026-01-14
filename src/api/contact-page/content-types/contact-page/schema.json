@@ -19,6 +19,14 @@
     "subtitle": {
       "type": "richtext"
     },
+    "heroEyebrow": {
+      "type": "string"
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
     "successMessage": {
       "type": "string"
     },
@@ -29,6 +37,9 @@
       "type": "string"
     },
     "locationText": {
+      "type": "text"
+    },
+    "mapDescription": {
       "type": "text"
     },
     "phonesTitle": {
@@ -48,6 +59,23 @@
     },
     "mapEmbedUrl": {
       "type": "string"
+    },
+    "contactIntroTitle": {
+      "type": "string"
+    },
+    "contactIntroSubtitle": {
+      "type": "text"
+    },
+    "contactChannels": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.contact-channel"
+    },
+    "formTitle": {
+      "type": "string"
+    },
+    "formSubtitle": {
+      "type": "text"
     },
     "seo": {
       "type": "component",

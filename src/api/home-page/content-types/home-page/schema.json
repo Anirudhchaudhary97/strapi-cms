@@ -39,6 +39,13 @@
       "repeatable": true,
       "component": "shared.stat-item"
     },
+    "heroBackgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "featuredServicesTitle": {
       "type": "string"
     },

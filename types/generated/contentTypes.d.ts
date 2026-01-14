@@ -757,11 +757,18 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
   attributes: {
     businessHoursBody: Schema.Attribute.RichText;
     businessHoursTitle: Schema.Attribute.String;
+    contactChannels: Schema.Attribute.Component<'common.contact-channel', true>;
+    contactIntroSubtitle: Schema.Attribute.Text;
+    contactIntroTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     emailsTitle: Schema.Attribute.String;
     errorMessage: Schema.Attribute.String;
+    formSubtitle: Schema.Attribute.Text;
+    formTitle: Schema.Attribute.String;
+    heroEyebrow: Schema.Attribute.String;
+    heroImage: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -770,6 +777,7 @@ export interface ApiContactPageContactPage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     locationText: Schema.Attribute.Text;
     locationTitle: Schema.Attribute.String;
+    mapDescription: Schema.Attribute.Text;
     mapEmbedUrl: Schema.Attribute.String;
     mapTitle: Schema.Attribute.String;
     phonesTitle: Schema.Attribute.String;
@@ -874,6 +882,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     >;
     featuredServicesSubtitle: Schema.Attribute.Text;
     featuredServicesTitle: Schema.Attribute.String;
+    heroBackgroundImage: Schema.Attribute.Media<'images'>;
     heroBadge: Schema.Attribute.String;
     heroPrimaryCtaLabel: Schema.Attribute.String;
     heroPrimaryCtaLink: Schema.Attribute.String;
