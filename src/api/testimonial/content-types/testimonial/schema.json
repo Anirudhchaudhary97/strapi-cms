@@ -22,6 +22,15 @@
     "companyName": {
       "type": "string"
     },
+    "companyAddress": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "integer",
+      "min": 1,
+      "max": 5,
+      "default": 5
+    },
     "content": {
       "type": "richtext",
       "required": true

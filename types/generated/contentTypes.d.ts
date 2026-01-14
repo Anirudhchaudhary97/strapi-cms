@@ -1160,6 +1160,7 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
   };
   attributes: {
     clientName: Schema.Attribute.String & Schema.Attribute.Required;
+    companyAddress: Schema.Attribute.String;
     companyName: Schema.Attribute.String;
     content: Schema.Attribute.RichText & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
@@ -1175,6 +1176,15 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
     order: Schema.Attribute.Integer;
     photo: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
+    rating: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<5>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
