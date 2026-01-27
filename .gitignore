@@ -1,7 +1,8 @@
 ############################
-# OS X
+# Operating Systems
 ############################
 
+# macOS
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -10,18 +11,10 @@ Icon
 .Trashes
 ._*
 
-
-############################
 # Linux
-############################
-
 *~
 
-
-############################
 # Windows
-############################
-
 Thumbs.db
 ehthumbs.db
 Desktop.ini
@@ -33,12 +26,143 @@ $RECYCLE.BIN/
 
 
 ############################
-# Packages
+# Environment & Secrets
+############################
+
+.env
+.env.local
+.env.production
+.env.development
+.env.*.local
+*.pem
+ssl/
+
+
+############################
+# Strapi CMS
+############################
+
+# Build & Distribution
+.tmp
+.cache
+build/
+dist/
+exports/
+.strapi/
+.strapi-updater.json
+.strapi-cloud.json
+
+# Database Files
+*.db
+*.db-*
+*.sql
+*.sqlite
+*.sqlite3
+data/data.db
+
+# Uploads & Media
+uploads/
+public/uploads/
+!public/uploads/.gitkeep
+
+
+############################
+# Node.js & Dependencies
+############################
+
+# Dependencies
+node_modules/
+lib-cov
+lcov.info
+.node_history
+
+# Package Managers
+.pnp
+.pnp.js
+.yarn/*
+!.yarn/cache
+!.yarn/unplugged
+!.yarn/patches
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# Lock files (optional - uncomment if needed)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+
+############################
+# Logs
+############################
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+pids
+results
+
+
+############################
+# Testing & Coverage
+############################
+
+coverage/
+*.lcov
+.nyc_output
+test-results/
+
+
+############################
+# TypeScript
+############################
+
+*.tsbuildinfo
+next-env.d.ts
+
+
+############################
+# IDEs & Editors
+############################
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+nbproject/
+
+# Vim
+*.swp
+*.swo
+*.swn
+*.swm
+*~
+
+# Emacs
+*#
+.#*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+
+############################
+# Build Artifacts & Archives
 ############################
 
 *.7z
-*.csv
-*.dat
 *.dmg
 *.gz
 *.iso
@@ -53,79 +177,15 @@ $RECYCLE.BIN/
 *.o
 *.seed
 *.so
-*.swo
-*.swp
-*.swn
-*.swm
 *.out
 *.pid
+*.csv
+*.dat
 
 
 ############################
-# Logs and databases
+# Miscellaneous
 ############################
 
-.tmp
-*.log
-*.sql
-*.sqlite
-*.sqlite3
-
-
-############################
-# Misc.
-############################
-
-*#
-ssl
-.idea
-nbproject
-public/uploads/*
-!public/uploads/.gitkeep
-.tsbuildinfo
 .eslintcache
-
-############################
-# Node.js
-############################
-
-lib-cov
-lcov.info
-pids
-logs
-results
-node_modules
-.node_history
-
-############################
-# Package managers
-############################
-
-.yarn/*
-!.yarn/cache
-!.yarn/unplugged
-!.yarn/patches
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
-yarn-error.log
-
-############################
-# Tests
-############################
-
-coverage
-
-############################
-# Strapi
-############################
-
-.env
 license.txt
-exports
-.strapi
-dist
-build
-.strapi-updater.json
-.strapi-cloud.json
