@@ -66,6 +66,11 @@
       "relation": "manyToMany",
       "target": "api::testimonial.testimonial"
     },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.cta-card"
+    },
     "seo": {
       "type": "component",
       "repeatable": false,

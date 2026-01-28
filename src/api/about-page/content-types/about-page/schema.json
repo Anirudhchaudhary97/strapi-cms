@@ -35,6 +35,11 @@
       "multiple": false,
       "allowedTypes": ["images"]
     },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.stat-item"
+    },
     "keyHighlightsTitle": {
       "type": "string"
     },
@@ -85,17 +90,10 @@
       "repeatable": true,
       "component": "shared.timeline-item"
     },
-    "ctaTitle": {
-      "type": "string"
-    },
-    "ctaDescription": {
-      "type": "text"
-    },
-    "ctaButtonLabel": {
-      "type": "string"
-    },
-    "ctaButtonLink": {
-      "type": "string"
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.cta-card"
     },
     "seo": {
       "type": "component",

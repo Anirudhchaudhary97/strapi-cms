@@ -445,10 +445,7 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    ctaButtonLabel: Schema.Attribute.String;
-    ctaButtonLink: Schema.Attribute.String;
-    ctaDescription: Schema.Attribute.Text;
-    ctaTitle: Schema.Attribute.String;
+    cta: Schema.Attribute.Component<'common.cta-card', false>;
     journeyIntro: Schema.Attribute.Text;
     journeyTitle: Schema.Attribute.String;
     keyHighlights: Schema.Attribute.Component<'shared.feature-item', true>;
@@ -469,6 +466,7 @@ export interface ApiAboutPageAboutPage extends Struct.SingleTypeSchema {
     missionTitle: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
+    stats: Schema.Attribute.Component<'shared.stat-item', true>;
     storyImage: Schema.Attribute.Media<'images'>;
     storyIntro: Schema.Attribute.RichText;
     storySideLogo: Schema.Attribute.Media<'images'>;
@@ -615,6 +613,7 @@ export interface ApiClientCategoryClientCategory
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    icon: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Building'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -657,6 +656,7 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
       'api::client.client'
     > &
       Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images'>;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     order: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
@@ -685,6 +685,7 @@ export interface ApiClientsPageClientsPage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'common.cta-card', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -695,6 +696,7 @@ export interface ApiClientsPageClientsPage extends Struct.SingleTypeSchema {
     sectionSubtitle: Schema.Attribute.Text;
     sectionTitle: Schema.Attribute.String;
     seo: Schema.Attribute.Component<'shared.seo', false>;
+    stats: Schema.Attribute.Component<'shared.stat-item', true>;
     subtitle: Schema.Attribute.RichText;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -876,6 +878,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'common.cta-card', false>;
     featuredServices: Schema.Attribute.Relation<
       'manyToMany',
       'api::service.service'

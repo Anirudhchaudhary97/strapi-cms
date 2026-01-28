@@ -21,6 +21,10 @@
       "targetField": "title",
       "required": true
     },
+    "icon": {
+      "type": "string",
+      "default": "Building"
+    },
     "order": {
       "type": "integer"
     },
