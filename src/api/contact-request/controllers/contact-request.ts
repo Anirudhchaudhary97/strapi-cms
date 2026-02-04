@@ -38,23 +38,41 @@ export default factories.createCoreController(
 
       try {
         // Get the created contact request data
-        const contactRequest = response.data;
+        strapi.log.info(
+          "Response structure:",
+          JSON.stringify(response, null, 2),
+        );
+        const contactRequest = response?.data;
+
+        if (!contactRequest) {
+          strapi.log.error("Contact request data is missing from response");
+          return response;
+        }
 
         // Fetch the service name if a service relation exists
         let serviceName = "Not specified";
-        if (contactRequest.attributes?.serviceInterestedIn?.data?.id) {
-          const service = await strapi.entityService.findOne(
-            "api::service.service",
-            contactRequest.attributes.serviceInterestedIn.data.id,
-          );
-          serviceName = service?.title || "Not specified";
+        if (contactRequest.serviceInterestedIn) {
+          try {
+            const service = await strapi.entityService.findOne(
+              "api::service.service",
+              contactRequest.serviceInterestedIn,
+              { fields: ["title"] },
+            );
+            serviceName = service?.title || "Not specified";
+          } catch (err) {
+            strapi.log.warn("Could not fetch service details:", err);
+          }
         }
 
         // Send email notification
+        strapi.log.info(
+          "Attempting to send email notification to:",
+          process.env.RESEND_USER_EMAIL,
+        );
         await strapi.plugins["email"].services.email.send({
-          to: process.env.RESEND_USER_EMAIL || "anurudhchaudhary97@gmail.com",
-          from: process.env.RESEND_DEFAULT_EMAIL || "onboarding@resend.dev",
-          subject: `New Contact Request from ${contactRequest.attributes.fullName}`,
+          to: process.env.RESEND_USER_EMAIL,
+          from: process.env.RESEND_DEFAULT_EMAIL,
+          subject: `New Contact Request from ${contactRequest.fullName}`,
           html: `
           <!DOCTYPE html>
           <html>
@@ -79,18 +97,18 @@ export default factories.createCoreController(
                 <div class="content">
                   <div class="field">
                     <div class="label">Name:</div>
-                    <div class="value">${contactRequest.attributes.fullName}</div>
+                    <div class="value">${contactRequest.fullName}</div>
                   </div>
                   <div class="field">
                     <div class="label">Email:</div>
-                    <div class="value"><a href="mailto:${contactRequest.attributes.email}">${contactRequest.attributes.email}</a></div>
+                    <div class="value"><a href="mailto:${contactRequest.email}">${contactRequest.email}</a></div>
                   </div>
                   ${
-                    contactRequest.attributes.phone
+                    contactRequest.phone
                       ? `
                   <div class="field">
                     <div class="label">Phone:</div>
-                    <div class="value"><a href="tel:${contactRequest.attributes.phone}">${contactRequest.attributes.phone}</a></div>
+                    <div class="value"><a href="tel:${contactRequest.phone}">${contactRequest.phone}</a></div>
                   </div>
                   `
                       : ""
@@ -100,29 +118,16 @@ export default factories.createCoreController(
                     <div class="value">${serviceName}</div>
                   </div>
                   ${
-                    contactRequest.attributes.message
+                    contactRequest.message
                       ? `
                   <div class="field">
                     <div class="label">Message:</div>
-                    <div class="value">${contactRequest.attributes.message.replace(/\n/g, "<br>")}</div>
+                    <div class="value">${contactRequest.message.replace(/\n/g, "<br>")}</div>
                   </div>
                   `
                       : ""
                   }
-                  ${
-                    contactRequest.attributes.sourcePage
-                      ? `
-                  <div class="field">
-                    <div class="label">Source Page:</div>
-                    <div class="value">${contactRequest.attributes.sourcePage}</div>
-                  </div>
-                  `
-                      : ""
-                  }
-                </div>
-                <div class="footer">
-                  <p>This notification was sent from the BBS Security CMS.</p>
-                  <p>Request ID: ${contactRequest.id} | Created: ${new Date().toLocaleString()}</p>
+
                 </div>
               </div>
             </body>
